@@ -1,5 +1,5 @@
 import unittest
-from pizza import Pizza, PizzaCalculator
+from src.pizza import Pizza, PizzaCalculator
 
 class PizzaCalculatorTest(unittest.TestCase):
     def test_should_return_pizza_index_0_2_3(self):
@@ -15,4 +15,3 @@ class PizzaCalculatorTest(unittest.TestCase):
         self.assertEqual(3, len(pizza_index))
         self.assertEqual("0, 2, 3", ", ".join(pizza_index))
 
-unittest.main()
