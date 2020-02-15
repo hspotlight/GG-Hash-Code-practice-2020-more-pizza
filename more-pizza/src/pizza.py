@@ -43,12 +43,10 @@ class PizzaCalculator:
         return PizzaCalculator.get_list_of_ordered_pizza_index(new_pizza_slice, backtrack_pizza_type) + [pizza_index]
 
 
-def getInput():
-    line1 = raw_input()
+def getInput(line1, line2):
     [target_slice, n_pizza] = line1.split()
     target_slice = int(target_slice)
     n_pizza = int(n_pizza)
-    line2 = raw_input()
     pizza_slices = line2.split()
     pizza_types = []
     for index, slices in enumerate(pizza_slices):
@@ -58,7 +56,9 @@ def getInput():
 
 
 if __name__ == '__main__':
-    [pizza_types, target_slice] = getInput()
+    line1 = raw_input()
+    line2 = raw_input()
+    [pizza_types, target_slice] = getInput(line1, line2)
 
     pizza_index = PizzaCalculator.get_ordered_pizza_index(pizza_types, target_slice)
 
