@@ -11,7 +11,7 @@ class PizzaCalculatorTest(unittest.TestCase):
             Pizza(2, 6),
             Pizza(3, 8)
         ]
-        pizza_index = PizzaCalculator.get_pizza(pizza_types, target_slice)
+        pizza_index = PizzaCalculator.get_ordered_pizza_index(pizza_types, target_slice)
         self.assertEqual(3, len(pizza_index))
         self.assertEqual("0, 2, 3", ", ".join(pizza_index))
 
